@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Genesis Website Generator</title>
+</head>
+<body>
+  <h1>Random Genesis Website Generator</h1>
+  <p>Click the button below to visit a random online shopping website for all Genesis related needs(link changes every 2 seconds, no need to refresh):</p>
+  <div id="linkContainer">
+    <a id="shoppingLink" href="#" target="_blank">Random Shopping Website</a>
+  </div>
+
+  <script>
+    const shoppingWebsites = [
+      "https://www.tenthousandvillages.com/",
+      "https://www.pier1.com/",
+      "https://www.worldmarket.com/",
+      "https://www.target.com/",
+      "https://www.anthropologie.com/",
+      "https://www.homegoods.com/",
+      "https://www.crateandbarrel.com/",
+      "https://www.westelm.com/",
+      "https://www.uncommongoods.com/",
+      "https://www.novica.com/",
+      "https://www.etsy.com/",
+      "https://www.cb2.com/",
+      "https://www.zappos.com/",
+      "https://www.overstock.com/worldstock",
+      "https://www.the-citizenry.com/",
+      "https://www.anichini.com/",
+      "https://www.serrv.org/",
+      "https://www.bodhitree.com/",
+      "https://www.culturalinteriors.com/",
+      "https://www.worldcraftindustries.com/",
+      "https://www.vivaterra.com/",
+      "https://www.sierralivingconcepts.com/",
+      "https://www.souvnear.com/",
+      "https://www.thecrossdesign.com/",
+      "https://www.laurelandwolf.com/shop/",
+      "https://www.athome.com/",
+      "https://www.jossandmain.com/",
+      "https://www.kirklands.com/",
+      "https://www.lampsplus.com/",
+      "https://www.potterybarn.com/",
+      "https://www.worldmarket.com/",
+      "https://www.hobbylobby.com/",
+      "https://www.homesense.com/",
+      // Add 20 more online shopping websites here
+    ];
+
+    function getRandomWebsite() {
+      const randomNumber = Math.floor(Math.random() * shoppingWebsites.length);
+      return shoppingWebsites[randomNumber];
+    }
+
+    function updateRandomWebsiteLink() {
+      const linkElement = document.getElementById("shoppingLink");
+      linkElement.href = getRandomWebsite();
+    }
+
+    // Update the link every 2 seconds
+    setInterval(updateRandomWebsiteLink, 2000);
+
+    // Load a random website link on page load
+    window.onload = updateRandomWebsiteLink;
+  </script>
+</body>
+</html>
