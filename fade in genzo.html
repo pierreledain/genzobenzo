@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body style="background-color: #1b6e45;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Genzo Website Generator</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      animation: fade-in 2s ease-out; /* Apply the fade-in animation on page load */
+    }
+
+    /* Keyframes for the fade-in animation */
+    @keyframes fade-in {
+      from {
+        opacity: 0; /* Start with opacity 0 (fully transparent) */
+      }
+      to {
+        opacity: 1; /* End with opacity 1 (fully opaque) */
+      }
+    }
+
+    #header {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #button-container {
+      position: relative;
+    }
+
+    #genzo-button {
+      width: 200px;
+      height: 100px;
+      background-color: red;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      line-height: 100px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    #genzo-button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Random Genzo Website Generator</h1>
+    <h2>Click the button below to visit a random online shopping website for all Genzo related needs:</h2>
+  </div>
+
+  <div id="button-container">
+    <button id="genzo-button">genzo</button>
+  </div>
+
+  <script>
+    var websites = [
+      "https://www.tenthousandvillages.com/",
+      "https://www.williams-sonoma.com/",
+      "https://www.pier1.com/",
+      "https://www.worldmarket.com/",
+      "https://www.target.com/",
+      "https://www.anthropologie.com/",
+      "https://www.homegoods.com/",
+      "https://www.crateandbarrel.com/",
+      "https://www.westelm.com/",
+      "https://www.uncommongoods.com/",
+      "https://www.novica.com/",
+      "https://www.cb2.com/",
+      "https://www.overstock.com/worldstock",
+      "https://www.the-citizenry.com/",
+      "https://www.anichini.com/",
+      "https://www.serrv.org/",
+      "https://www.culturalinteriors.com/",
+      "https://www.worldcraftindustries.com/",
+      "https://www.vivaterra.com/",
+      "https://www.urbanoutfitters.com",
+      "https://www.souvnear.com/",
+      "https://www.thecrossdesign.com/",
+      "https://www.athome.com/",
+      "https://www.jossandmain.com/",
+      "https://www.kirklands.com/",
+      "https://www.lampsplus.com/",
+      "https://www.potterybarn.com/",
+      "https://www.worldmarket.com/",
+      "https://www.hobbylobby.com/",
+      "https://www.homesense.com/",
+    ];
+
+    function getRandomWebsite() {
+      var randomIndex = Math.floor(Math.random() * websites.length);
+      var randomWebsite = websites[randomIndex];
+      return randomWebsite;
+    }
+
+    function openRandomWebsite() {
+      var randomWebsite = getRandomWebsite();
+      window.open(randomWebsite, '_blank');
+    }
+
+    document.getElementById('genzo-button').addEventListener('click', function() {
+      openRandomWebsite();
+    });
+
+    // Change the link every 2 seconds
+    setInterval(function() {
+      openRandomWebsite();
+    }, 2000);
+  </script>
+</body>
+</html>
