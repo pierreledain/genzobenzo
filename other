@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord Progression Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chord Progression Generator</h1>
+        <label for="mood-select">Select Mood:</label>
+        <select id="mood-select">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="energetic">Energetic</option>
+            <option value="calm">Calm</option>
+        </select>
+        <button id="generate-btn">Generate Chord Progression</button>
+        <div id="chord-progressions"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
